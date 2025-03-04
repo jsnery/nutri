@@ -34,19 +34,6 @@
             <button class="btn btn-dark" id="darkModeToggle">
                 <i class="icon ion-ios-moon-outline icon-size"></i>
             </button>
-            <!-- <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav">
-                <span class="visually-hidden">Toggle navigation</span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">CV</a></li>
-                    <li class="nav-item">
-                        <button class="btn btn-dark" id="darkModeToggle">Dark Mode</button>
-                    </li>
-                </ul>
-            </div> -->
         </div>
     </nav>
     <main class="page">
@@ -91,10 +78,7 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="card special-skill-item border-0">
-                            <div class="card-header bg-transparent border-0"><i class="icon ion-ios-star-outline"></i>
-                            </div>
                             <div class="card-body">
-                                <h3 class="card-title" style="font-family: 'Baloo 2', serif;">Interesses</h3>
                                 <p class="card-text new-p">Sou uma jovem de 23 anos, mãe dedicada de um menino
                                     incrível e um companheiro peludo que alegra meus dias. Minha paixão pela nutrição me levou a
                                     cursar a graduação na UNIT.<br><br>Além disso, me interesso profundamente por neuro
@@ -170,6 +154,8 @@
         </div>
     </footer>
 
+    <audio id="backgroundAudio" src="./assets/audio/playback.m4a" loop></audio>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.min.js?h=8f2950253cc49508fb3352618a979f35"></script>
 
@@ -177,7 +163,7 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         let theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-bs-theme', theme);
-        darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-moon-outline icon-size"></i>' : '<i class="icon ion-ios-moon icon-size"></i>';
+        darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-moon icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
 
         darkModeToggle.addEventListener('click', () => {
             theme = theme === 'dark' ? 'light' : 'dark';
@@ -185,6 +171,10 @@
             localStorage.setItem('theme', theme);
             darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-moon icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
         });
+
+        const backgroundAudio = document.getElementById('backgroundAudio');
+        backgroundAudio.volume = 0.2;
+        backgroundAudio.play();
     </script>
 
 </body>
