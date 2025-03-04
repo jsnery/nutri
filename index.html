@@ -19,12 +19,12 @@
         }
 
         .icon-size {
-            font-size: 1.5em; /* Ajuste o tamanho conforme necessário */
+            font-size: 1.3em; /* Ajuste o tamanho conforme necessário */
         }
     </style>
 </head>
 
-<body style="overflow-y: hidden;">
+<body style="overflow-x: hidden;">
     <nav class="navbar navbar-expand-lg portfolio-navbar gradient navbar-dark">
         <div class="container">
             <a class="navbar-brand logo" href="#" style="font-family: 'Baloo 2', serif;font-size: 24px;">
@@ -168,13 +168,13 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         let theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-bs-theme', theme);
-        darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-sunny-outline icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
+        darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-moon-outline icon-size"></i>' : '<i class="icon ion-ios-moon icon-size"></i>';
 
         darkModeToggle.addEventListener('click', () => {
             theme = theme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);
-            darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-sunny-outline icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
+            darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-moon icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
         });
     </script>
 
