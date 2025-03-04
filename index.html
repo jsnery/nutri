@@ -171,17 +171,9 @@
             document.documentElement.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);
             darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-moon icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
-        });
-
-        const playAudio = () => {
             backgroundAudio.volume = 0.2;
             backgroundAudio.play();
-            document.body.removeEventListener('click', playAudio);
-            window.removeEventListener('scroll', playAudio);
-        };
-
-        document.body.addEventListener('click', playAudio);
-        window.addEventListener('scroll', playAudio);
+        });
     </script>
 
 </body>
