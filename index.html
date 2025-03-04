@@ -35,6 +35,9 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">CV</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-dark" id="darkModeToggle">Dark Mode</button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -153,6 +156,39 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.min.js?h=8f2950253cc49508fb3352618a979f35"></script>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        let theme = document.documentElement.getAttribute('data-bs-theme');
+    
+        darkModeToggle.addEventListener('click', () => {
+            theme = theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-bs-theme', theme);
+    
+            fetch('./updateTheme.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ theme: theme })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status !== 'success') {
+                    console.error('Error updating theme:', data.message);
+                }
+            })
+            .catch(error => console.error('Error updating theme:', error));
+        });
+    
+        fetch('./config.json')
+            .then(response => response.json())
+            .then(data => {
+                document.documentElement.setAttribute('data-bs-theme', data.theme);
+                theme = data.theme;
+            })
+            .catch(error => console.error('Error fetching theme:', error));
+    </script>
 </body>
 
 </html>
