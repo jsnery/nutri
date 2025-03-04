@@ -27,7 +27,9 @@
                 <img src="./assets/img/SIMBOLO-NUTRI.png?h=6de2d1fd0a1edc13d2a9c5c94f385aab" width="50" height="50" style="width: 50px;height: 50px;margin-left: 0px;margin-right: 10px;">
                 Amanda Tavares
             </a>
-            <button class="btn btn-dark" id="darkModeToggle">Dark Mode</button>
+            <button class="btn btn-dark" id="darkModeToggle">
+                <i class="icon ion-ios-moon-outline"></i>
+            </button>
             <!-- <button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navbarNav">
                 <span class="visually-hidden">Toggle navigation</span>
                 <span class="navbar-toggler-icon"></span>
@@ -162,13 +164,13 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         let theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-bs-theme', theme);
-        darkModeToggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
-    
+        darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-sunny-outline"></i>' : '<i class="icon ion-ios-moon-outline"></i>';
+
         darkModeToggle.addEventListener('click', () => {
             theme = theme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);
-            darkModeToggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+            darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-sunny-outline"></i>' : '<i class="icon ion-ios-moon-outline"></i>';
         });
     </script>
 
