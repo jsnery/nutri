@@ -168,13 +168,13 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         let theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-bs-theme', theme);
-        darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-sunny-outline"></i>' : '<i class="icon ion-ios-moon-outline"></i>';
+        darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-sunny-outline icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
 
         darkModeToggle.addEventListener('click', () => {
             theme = theme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);
-            darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-sunny-outline"></i>' : '<i class="icon ion-ios-moon-outline"></i>';
+            darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-sunny-outline icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
         });
     </script>
 
