@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Baloo 2';
-    src: url(./assets/fonts/Baloo%202-b95ff3098d11e6e05efa30f525b05395.woff2?h=38337d21e041636ccb4e5e01b2c5b3da) format('woff2');
+    src: url(./assets/fonts/Baloo%202-b95ff3098d11e6e05efa30f525b05395.woff2) format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'Baloo 2';
-    src: url(./assets/fonts/Baloo%202-5a4c3350a2a6e61bfb6ca0cd9751964b.woff2?h=38337d21e041636ccb4e5e01b2c5b3da) format('woff2');
+    src: url(./assets/fonts/Baloo%202-5a4c3350a2a6e61bfb6ca0cd9751964b.woff2) format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: 'Baloo 2';
-    src: url(./assets/fonts/Baloo%202-d3648bc54379bf4eed6a7c048021715b.woff2?h=38337d21e041636ccb4e5e01b2c5b3da) format('woff2');
+    src: url(./assets/fonts/Baloo%202-d3648bc54379bf4eed6a7c048021715b.woff2) format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -27,7 +27,7 @@
 
 @font-face {
     font-family: 'Baloo 2';
-    src: url(./assets/fonts/Baloo%202-6e6258b15b957699f1c9cecab5ca8509.woff2?h=38337d21e041636ccb4e5e01b2c5b3da) format('woff2');
+    src: url(./assets/fonts/Baloo%202-6e6258b15b957699f1c9cecab5ca8509.woff2) format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
