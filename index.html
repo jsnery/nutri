@@ -161,11 +161,13 @@
         const darkModeToggle = document.getElementById('darkModeToggle');
         let theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-bs-theme', theme);
+        darkModeToggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
     
         darkModeToggle.addEventListener('click', () => {
             theme = theme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);
+            darkModeToggle.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
         });
     </script>
 
