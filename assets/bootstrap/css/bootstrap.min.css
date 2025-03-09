@@ -13610,7 +13610,7 @@ img::-moz-selection {
 }
 
 .gradient {
-    background: linear-gradient(120deg, #7f70f5, #0ea0ff);
+    background: linear-gradient(120deg,#0ea0ff, #70f58d);
     color: #fff
 }
 
@@ -13759,7 +13759,7 @@ img::-moz-selection {
 .special-skill-item .icon {
     text-align: center;
     font-size: 50px;
-    background-color: #0ea0ff;
+    background: linear-gradient(120deg,#0ea0ff, #70f58d);
     color: #fff;
     height: 70px;
     width: 70px;
@@ -14579,4 +14579,18 @@ img::-moz-selection {
 .pika-table abbr {
     border-bottom: none;
     cursor: help
+}
+
+.btn-outline-primary {
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background: linear-gradient(120deg, #0ea0ff, #70f58d);
+    border-color: transparent;
+    transition: all 0.3s ease;
 }
