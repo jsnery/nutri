@@ -42,7 +42,13 @@
         }
 
         .icon-size {
-            font-size: 1.3em; /* Ajuste o tamanho conforme necessário */
+            font-size: 2em; /* Ajuste o tamanho conforme necessário */
+        }
+
+        @media (max-width: 768px) {
+            .icon-size {
+                margin-right: 15px;
+            }
         }
 
         @media (min-width: 768px) {
@@ -60,9 +66,7 @@
                 <img src="./assets/img/SIMBOLO-NUTRI.png?h=6de2d1fd0a1edc13d2a9c5c94f385aab" width="50" height="50" style="width: 50px;height: 50px;margin-left: 0px;margin-right: 10px;">
                 Amanda Tavares
             </a>
-            <button class="btn btn-dark" id="darkModeToggle">
-                <i class="icon ion-ios-moon-outline icon-size"></i>
-            </button>
+            <i id="darkModeToggle" class="icon ion-ios-moon icon-size"></i>
         </div>
     </nav>
     <main class="page">
@@ -194,16 +198,15 @@
 
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
-        const backgroundAudio = document.getElementById('backgroundAudio');
         let theme = localStorage.getItem('theme') || 'light';
         document.documentElement.setAttribute('data-bs-theme', theme);
-        darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-moon icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
+        darkModeToggle.className = theme === 'dark' ? 'icon ion-ios-sunny icon-size' : 'icon ion-ios-moon icon-size';
 
         darkModeToggle.addEventListener('click', () => {
             theme = theme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);
-            darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-moon icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
+            darkModeToggle.className = theme === 'dark' ? 'icon ion-ios-sunny icon-size' : 'icon ion-ios-moon icon-size';
         });
 
         let isPlaying = false;
