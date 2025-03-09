@@ -8,6 +8,34 @@
 	<link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css?h=97f29be617557a0886946172d7688ddf">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="./assets/css/styles.min.css?h=663ca038b9604c6f995458cd5c0f1919">
+
+	<style>
+        .new-p {
+            font-size: 1.2em;
+        }
+
+        h2 {
+            text-transform: none !important;
+        }
+
+        .avatar-zoom-on-hover {
+            transition: transform 0.3s ease;
+        }
+
+        .avatar-zoom-on-hover:hover {
+            transform: scale(1.1);
+        }
+
+        .icon-size {
+            font-size: 1.3em; /* Ajuste o tamanho conforme necessário */
+        }
+
+        @media (min-width: 768px) {
+            .about {
+                margin: 0 100px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -25,9 +53,7 @@
 	<main class="page">
 		<section class="portfolio-block block-intro border-bottom">
             <div class="container">
-                <div class="avatar ps-0 pe-0 pb-0 mb-3"
-                    style="height: 175px;width: 175px;background: url(./assets/img/avatars/467901105_566040112683709_1256201363832998243_n.jpg?h=3f7102e5f73ff9fddb4daaa22fb7d91c) round;">
-                </div>
+                <img class="avatar avatar-zoom-on-hover ps-0 pe-0 pb-0 mb-3" src="./assets/img/avatars/467901105_566040112683709_1256201363832998243_n.jpg" style="height: 175px;width: 175px;border-radius: 50%;">
                 <div class="about-me">
                     <p>Prazer, <strong style="font-family: 'Baloo 2'; font-size: 26.4px; font-weight: bold;">Amanda</strong>! Meu objetivo é ajudar as pessoas, sempre orientando e
                         ensinando a trilhar caminhos melhores e mais saudáveis através da <strong></strong>nutrição</strong>.</p>
