@@ -42,7 +42,13 @@
         }
 
         .icon-size {
-            font-size: 1.3em; /* Ajuste o tamanho conforme necessário */
+            font-size: 2em; /* Ajuste o tamanho conforme necessário */
+        }
+
+        @media (max-width: 768px) {
+            .icon-size {
+                margin-right: 15px;
+            }
         }
 
         @media (min-width: 768px) {
@@ -60,9 +66,7 @@
                 <img src="./assets/img/SIMBOLO-NUTRI.png?h=6de2d1fd0a1edc13d2a9c5c94f385aab" width="50" height="50" style="width: 50px;height: 50px;margin-left: 0px;margin-right: 10px;">
                 Amanda Tavares
             </a>
-            <button class="btn btn-dark" id="darkModeToggle">
-                <i class="icon ion-ios-moon-outline icon-size"></i>
-            </button>
+            <i id="darkModeToggle" class="icon ion-ios-moon icon-size"></i>
         </div>
     </nav>
 	<main class="page">
@@ -196,14 +200,14 @@
 			</div>
 		</section>
 	</main>
-	<footer class="page-footer py-3 border-top gradient">
+    <footer class="page-footer py-3 border-top gradient">
         <div class="container my-4">
             <div class="social-icons">
                 <a class="me-3" href="#">
                     <i class="icon ion-social-facebook"></i>
                 </a>
                 <a class="me-3" href="https://www.instagram.com/amndnutri/">
-                    <i class="icon ion-social-instagram-outline"></i>
+                    <i class="icon ion-social-instagram"></i>
                 </a>
                 <a class="me-3" href="#">
                     <i class="icon ion-social-twitter"></i>
