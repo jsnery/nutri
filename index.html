@@ -21,13 +21,19 @@
         .icon-size {
             font-size: 1.3em; /* Ajuste o tamanho conforme necessário */
         }
+
+        @media (min-width: 768px) {
+            .about {
+                margin: 0 100px;
+            }
+        }
     </style>
 </head>
 
 <body style="overflow-x: hidden;">
     <nav class="navbar navbar-expand-lg portfolio-navbar fixed-top gradient navbar-dark">
         <div class="container">
-            <a class="navbar-brand logo" href="#" style="font-family: 'Baloo 2', serif;font-size: 24px;">
+            <a class="navbar-brand logo" href="./index.html" style="font-family: 'Baloo 2', serif;font-size: 24px;">
                 <img src="./assets/img/SIMBOLO-NUTRI.png?h=6de2d1fd0a1edc13d2a9c5c94f385aab" width="50" height="50" style="width: 50px;height: 50px;margin-left: 0px;margin-right: 10px;">
                 Amanda Tavares
             </a>
@@ -43,7 +49,7 @@
                     style="height: 175px;width: 175px;background: url(./assets/img/avatars/467901105_566040112683709_1256201363832998243_n.jpg?h=3f7102e5f73ff9fddb4daaa22fb7d91c) round;">
                 </div>
                 <div class="about-me">
-                    <p>Prazer, <strong>Amanda</strong>! Meu objetivo é ajudar as pessoas, sempre orientando e
+                    <p>Prazer, <strong style="font-family: 'Baloo 2'; font-size: 26.4px; font-weight: bold;">Amanda</strong>! Meu objetivo é ajudar as pessoas, sempre orientando e
                         ensinando a trilhar caminhos melhores e mais saudáveis através da <strong></strong>nutrição</strong>.</p>
                 </div>
             </div>
@@ -52,17 +58,17 @@
             <div class="container">
                 <div class="row g-0">
                     <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                        <a href="#">
+                        <a>
                             <img class="img-fluid image pb-0 mb-0 pe-0 me-0 pt-0" src="./assets/img/nature/n1.webp?h=6bdb9957e105a87d2075879e02159978">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                        <a href="#">
+                        <a>
                             <img class="img-fluid image" src="./assets/img/nature/n2.webp?h=c5fb06440e9759bec9433393cd5a9761">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item zoom-on-hover">
-                        <a href="#">
+                        <a>
                             <img class="img-fluid image" src="./assets/img/nature/n3.webp?h=e138a8bfe4ed72819d3bbf626d732745">
                         </a>
                     </div>
@@ -70,7 +76,15 @@
             </div>
         </section>
 
-        <section class="portfolio-block skills" style="padding-top: 25px;">
+        <section class="portfolio-block call-to-action border-bottom">
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center content">
+                    <h3>Quer saber mais?</h3><button id="cv" class="btn btn-outline-primary btn-lg" type="button">Curriculo</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-block skills border-bottom" style="padding-top: 35px; padding-bottom: 0px;">
             <div class="container"><!-- Start: portfolio heading -->
                 <div class="heading">
                     <h2 style="font-family: 'Baloo 2', serif;font-size: 26.4px;font-weight: bold;">Sobre mim</h2>
@@ -79,7 +93,7 @@
                     <div class="col-12">
                         <div class="card special-skill-item border-0">
                             <div class="card-body">
-                                <p class="card-text new-p">Sou uma jovem de 23 anos, mãe dedicada de um menino
+                                <p class="card-text new-p about">Sou uma jovem de 23 anos, mãe dedicada de um menino
                                     incrível e um companheiro peludo que alegra meus dias. Minha paixão pela nutrição me levou a
                                     cursar a graduação na UNIT.<br><br>Além disso, me interesso profundamente por neuro
                                     nutrição, buscando entender como a alimentação influencia a saúde do cérebro, e pela
@@ -154,8 +168,6 @@
         </div>
     </footer>
 
-    <audio id="backgroundAudio" src="./assets/audio/playback.m4a" loop></audio>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.min.js?h=8f2950253cc49508fb3352618a979f35"></script>
 
@@ -171,11 +183,39 @@
             document.documentElement.setAttribute('data-bs-theme', theme);
             localStorage.setItem('theme', theme);
             darkModeToggle.innerHTML = theme === 'dark' ? '<i class="icon ion-ios-moon icon-size"></i>' : '<i class="icon ion-ios-moon-outline icon-size"></i>';
-            backgroundAudio.volume = 0.1;
-            backgroundAudio.play();
         });
+
+        let isPlaying = false;
+
+        document.addEventListener("click", () => {
+            if (!isPlaying) {
+            playAudio();
+            }
+        }, { once: true });
+
+        document.addEventListener("scroll", () => {
+            if (!isPlaying) {
+            playAudio();
+            }
+        }, { once: true });
+
+        function playAudio() {
+            const player = new Audio("./assets/audio/playback.m4a");
+            player.volume = 0.2;
+            player.loop = true;
+
+            player.play().then(() => {
+            isPlaying = true;
+            }).catch(err => console.log("Autoplay bloqueado:", err));
+        }
     </script>
 
+
+    <script>
+        document.getElementById('cv').addEventListener('click', () => {
+            window.location.href = './cv.html';
+        });
+    </script>
 </body>
 
 </html>
