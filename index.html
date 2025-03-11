@@ -230,7 +230,7 @@
                     <div class="col-12">
                         <div class="card special-skill-item border-0">
                             <div class="card-body">
-                                <p class="card-text new-p about">Sou uma jovem de 23 anos, mãe dedicada de um menino
+                                <p class="card-text new-p about">Sou uma jovem de <span id="age"></span> anos, mãe dedicada de um menino
                                     incrível e um companheiro peludo que alegra meus dias. Minha paixão pela nutrição me
                                     levou a
                                     cursar a graduação na UNIT.<br><br>Além disso, me interesso profundamente por neuro
@@ -293,8 +293,8 @@
             </div>
         </section>
     </main>
-    <footer class="page-footer py-3 border-top gradient">
-        <div class="container my-4">
+    <footer class="page-footer py-1 border-top gradient">
+        <div class="container my-1">
             <div class="social-icons">
                 <a class="me-3" href="#">
                     <i class="icon ion-social-facebook"></i>
@@ -311,6 +311,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.min.js?h=8f2950253cc49508fb3352618a979f35"></script>
+
+    <script>
+        const birthDate = new Date('2001-08-19');
+        const age = new Date(Date.now() - birthDate.getTime()).getUTCFullYear() - 1970;
+        document.getElementById('age').innerText = age;
+    </script>
 
     <script>
         const darkModeToggle = document.getElementById('darkModeToggle');
