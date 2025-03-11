@@ -96,8 +96,6 @@
             .portifolio-bg-2 {
                 background-image: url("./assets/img/back2.webp");
                 background-size: cover;
-                /* Alterado de cover para contain */
-                background-repeat: no-repeat;
                 /* Adicionado para evitar repetição */
                 background-position: center;
                 display: block;
@@ -122,6 +120,19 @@
     
             .elementor-heading-title {
                 font-size: 1.4em;
+            }
+
+        }
+
+        @media (max-width: 800px) {
+
+            .portifolio-bg-2 {
+                background-image: url("./assets/img/back2.webp");
+                background-size: cover;
+                /* Adicionado para evitar repetição */
+                background-position: center;
+                display: block;
+                min-height: 400px;
             }
 
         }

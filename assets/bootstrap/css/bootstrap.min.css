@@ -5353,7 +5353,7 @@ textarea.form-control-lg {
     color: var(--bs-progress-bar-color);
     text-align: center;
     white-space: nowrap;
-    background-color: var(--bs-progress-bar-bg);
+    background-color: #7a162f;
     transition: var(--bs-progress-bar-transition)
 }
 
@@ -9438,7 +9438,7 @@ textarea.form-control-lg {
 
 .bg-primary {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important
+    background-color: #8b1e3fce !important
 }
 
 .bg-secondary {
@@ -9448,7 +9448,7 @@ textarea.form-control-lg {
 
 .bg-success {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-success-rgb), var(--bs-bg-opacity)) !important
+    background-color: #31167aad !important
 }
 
 .bg-info {
@@ -13610,7 +13610,7 @@ img::-moz-selection {
 }
 
 .gradient {
-    background: linear-gradient(120deg,#0b78c0, #5ac772);
+    background: linear-gradient(120deg, #aa2a51, #31167a);
     color: #fff
 }
 
@@ -13759,7 +13759,7 @@ img::-moz-selection {
 .special-skill-item .icon {
     text-align: center;
     font-size: 50px;
-    background: linear-gradient(120deg,#0ea0ff, #70f58d);
+    background: linear-gradient(120deg, #aa2a51, #31167a);
     color: #fff;
     height: 70px;
     width: 70px;
@@ -13918,7 +13918,7 @@ img::-moz-selection {
 
 .portfolio-info-card.contact-info .icon {
     font-size: 1.5rem;
-    color: var(--bs-primary);
+    color: #7a161b;
     position: relative;
     bottom: 4px
 }
@@ -14582,15 +14582,15 @@ img::-moz-selection {
 }
 
 .btn-outline-primary {
-    color: var(--bs-primary);
-    border-color: var(--bs-primary);
+    color: #aa2a51 !important;
+    border-color: #aa2a51 !important;
     background-color: transparent;
     transition: all 0.3s ease;
 }
 
 .btn-outline-primary:hover {
-    color: #fff;
-    background: linear-gradient(120deg, #0ea0ff, #70f58d);
-    border-color: transparent;
+    color: #fff !important;
+    background: linear-gradient(120deg, #aa2a51, #31167a);
+    border-color: transparent !important;
     transition: all 0.3s ease;
 }
