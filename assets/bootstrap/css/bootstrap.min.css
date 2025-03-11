@@ -5353,7 +5353,7 @@ textarea.form-control-lg {
     color: var(--bs-progress-bar-color);
     text-align: center;
     white-space: nowrap;
-    background-color: #7a162f;
+    background-color: #aa2a51;
     transition: var(--bs-progress-bar-transition)
 }
 
@@ -13918,7 +13918,7 @@ img::-moz-selection {
 
 .portfolio-info-card.contact-info .icon {
     font-size: 1.5rem;
-    color: #7a161b;
+    color: #aa2a51;
     position: relative;
     bottom: 4px
 }
