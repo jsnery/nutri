@@ -8536,15 +8536,15 @@ textarea.form-control-lg {
 }
 
 @media (max-width: 576px) {
-    .mb-sm-0 {
+    .new-mb-sm-0 {
         margin-bottom: 0 !important
     }
 
-    .mb-sm-1 {
+    .new-mb-sm-1 {
         margin-bottom: .25rem !important
     }
 
-    .mb-sm-2 {
+    .new-mb-sm-2 {
         margin-bottom: .5rem !important
     }
 }
