@@ -8131,7 +8131,7 @@ textarea.form-control-lg {
     width: 100% !important
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
     .w-sm-25 {
         width: 25% !important
     }
